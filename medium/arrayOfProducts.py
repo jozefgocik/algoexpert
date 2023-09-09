@@ -1,16 +1,16 @@
 # Solution 1
-def arrayOfProducts(array):
-    # O(n^2) time / O(n) space
-    result = []
-
-    for i in range(0, len(array)):
-        currentValue = 1
-        for j in range(0, len(array)):
-            if i != j:
-                currentValue *= array[j]
-        result.append(currentValue)
-
-    return result
+# def arrayOfProducts(array):
+#     # O(n^2) time / O(n) space
+#     result = []
+#
+#     for i in range(0, len(array)):
+#         currentValue = 1
+#         for j in range(0, len(array)):
+#             if i != j:
+#                 currentValue *= array[j]
+#         result.append(currentValue)
+#
+#     return result
 
 # Solution 2
 # def arrayOfProducts(array):
