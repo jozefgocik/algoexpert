@@ -1,22 +1,41 @@
 # Solution 1
-def minHeightBst(array):
-    # O(nLog(n)) time / O(n) space
-    return minHeightBstHelper(array, None, 0, len(array) - 1)
+# def minHeightBst(array):
+#     # O(nLog(n)) time / O(n) space
+#     return minHeightBstHelper(array, None, 0, len(array) - 1)
 
-def minHeightBstHelper(array, tree, startIdx, endIdx):
+# def minHeightBstHelper(array, tree, startIdx, endIdx):
+#     if endIdx < startIdx:
+#         return
+#
+#     index = (startIdx + endIdx) // 2
+#     value = array[index]
+#
+#     if tree is None:
+#         tree = BST(value)
+#     else:
+#         tree.insert(value)
+#
+#     minHeightBstHelper(array, tree, startIdx, index - 1)
+#     minHeightBstHelper(array, tree, index + 1, endIdx)
+#
+#     return tree
+
+# Solution 2
+def minHeightBst(array):
+    # O(n) time / O(n) space
+    return minHeightBstHelper(array, 0, len(array) - 1)
+
+
+def minHeightBstHelper(array, startIdx, endIdx):
     if endIdx < startIdx:
-        return
+        return None
 
     index = (startIdx + endIdx) // 2
     value = array[index]
 
-    if tree is None:
-        tree = BST(value)
-    else:
-        tree.insert(value)
-
-    minHeightBstHelper(array, tree, startIdx, index - 1)
-    minHeightBstHelper(array, tree, index + 1, endIdx)
+    tree = BST(value)
+    tree.left = minHeightBstHelper(array, startIdx, index - 1)
+    tree.right = minHeightBstHelper(array, index + 1, endIdx)
 
     return tree
 class BST:
