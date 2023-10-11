@@ -1,5 +1,5 @@
 def numberOfWaysToMakeChange(n, denoms):
-    # O(n) time / O(n * d) space; d = number of denominations
+    # O(n * d) time / O(n) space; d = number of denoms
     ways = [0 for amount in range(0, n + 1)]
     ways[0] = 1
 
