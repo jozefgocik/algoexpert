@@ -12,7 +12,7 @@ class Node:
         return self
 
     def breadthFirstSearch(self, array):
-        # O(n + e) time / O(n) space; v = number of nodes; e = numer of edges
+        # O(n + e) time / O(n) space; n = number of nodes; e = numer of edges
         queue = [self]
         while queue:
             child = queue.pop(0)
