@@ -1,4 +1,3 @@
-# Solution 1
 def revealMinesweeper(board, row, column):
     # O(n * m) time / O(n * m) space; n = number of rows, m = number of columns
     if board[row][column] == 'M':
