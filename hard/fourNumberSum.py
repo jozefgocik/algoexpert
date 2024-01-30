@@ -1,5 +1,6 @@
 def fourNumberSum(array, targetSum):
-    # O(n ^ 2) time / O(n ^ 2) space
+    # Average: O(n ^ 2) time / O(n ^ 2) space
+    # Worst: O(n ^ 3) time / O(n ^ 2) space
     result = []
     table = {}
 
